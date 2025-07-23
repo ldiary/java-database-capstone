@@ -7,8 +7,8 @@ It leverages Spring Boot's MVC and REST controllers. This means, while the Admin
 ## Data Flow
 
 1. User accesses AdminDashboard, DoctorDashboard, PatientDashboard, PatientRecord or Appointment.
-2. The AdminDashboard and DoctorDashboard actions will be routed to Thymeleaf Controllers, while PatientDashboard, PatientRecord and Appointment actions will be routed to REST Controllers.  is routed to the appropriate Thymeleaf or REST controller.
-3. Both Thymeleaf Controllers and REST Controllers will be served by Service Layer.
+2. The AdminDashboard and DoctorDashboard actions will be routed to Thymeleaf Controllers, while PatientDashboard, PatientRecord and Appointment actions will be routed to REST Controllers.
+3. Both Thymeleaf Controllers and REST Controllers will be served by Service Layer.[schema-architecture.md](schema-architecture.md)
 4. For structured data (e.g. Doctor, Patient, Appointment, Admin) the Service Layer will connect to the MySQL repositories. For unstructured data (e.g. Prescription), the Service Layer will connect to the MongoDB repository.
 5. MySQL repositories will access MySQL database engine, while MongoDB repository will access MongoDB database engine.
 6. For Model Binding, MySQL data are converted into JPA entities which represent rows in the relational tables in the database. MongoDB data are loaded into document objects which map to BSON/JSON structures in the collections.
