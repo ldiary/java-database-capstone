@@ -25,6 +25,7 @@ _As an Admin, I want a secure Admin portal, so that I can manage the platform se
  And I am successfully logged in the Admin portal
  When I add a doctor into the system
  Then the doctor's profile should be added successfully
+ And the doctor can successfully log into Doctor portal
  ```
 4. **Can delete doctor**
 ```gherkin
@@ -33,6 +34,7 @@ _As an Admin, I want a secure Admin portal, so that I can manage the platform se
  And a doctor is present in the system
  When I delete the doctor's profile
  Then the doctor is deleted from the system
+ And the doctor can no longer log into the Doctor portal
  ```
 5. **Can get number of appointments per month**
 ```gherkin
