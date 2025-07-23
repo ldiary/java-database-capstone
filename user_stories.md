@@ -48,3 +48,52 @@ _As an Admin, I want a secure Admin portal, so that I can manage the platform se
 
 **Notes:**
 - Triggering of MySQL CLI procedure should be available in the Admin portal
+
+## Patient User Stories
+**Title:**
+_As a Patient, I want a Patient portal, so that I can find doctors and securely manage my appointment._
+
+**Acceptance Criteria:**
+1. Can view list of doctors without logging in
+ ```gherkin
+ Given I am a Patient
+ And I am not logged into the Patient portal
+ When I select a doctors' list
+ Then I should be able to see a list of doctors
+ ```
+2. Can sign up using email and password
+ ```gherkin
+ Given I am a Patient
+ And I am not logged into the Patient portal
+ When I select sign up
+ And I enter my email and password
+ Then I should be successfully registered into the system
+ ```
+3. Can log into the portal to manage bookings
+ ```gherkin
+ Given I am a Patient
+ And I am not logged into the Patient portal
+ When I log into the portal using my email and password
+ Then my login attempt should be successful
+ ```
+4. Can log out of the portal
+```gherkin
+ Given I am a Patient
+ And I am successfully logged in the Patient portal
+ When I log out of the Patient portal
+ Then my log out attempt should be successful
+ ```
+5. Can view upcoming appointments
+```gherkin
+ Given I am a Patient
+ And I am successfully logged in the Patient portal
+ When I select my upcoming appointments
+ Then I should see the list of my upcoming appointments
+ ```
+
+**Priority:** High
+
+**Story Points:** 8 points
+
+**Notes:**
+- Make sure to test the view of appointments when there are 1) zero appointment and 2) one or more appointments
