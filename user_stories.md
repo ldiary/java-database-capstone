@@ -54,14 +54,14 @@ _As an Admin, I want a secure Admin portal, so that I can manage the platform se
 _As a Patient, I want a Patient portal, so that I can find doctors and securely manage my appointment._
 
 **Acceptance Criteria:**
-1. Can view list of doctors without logging in
+1. **Can view list of doctors without logging in**
  ```gherkin
  Given I am a Patient
  And I am not logged into the Patient portal
  When I select a doctors' list
  Then I should be able to see a list of doctors
  ```
-2. Can sign up using email and password
+2. **Can sign up using email and password**
  ```gherkin
  Given I am a Patient
  And I am not logged into the Patient portal
@@ -69,21 +69,21 @@ _As a Patient, I want a Patient portal, so that I can find doctors and securely 
  And I enter my email and password
  Then I should be successfully registered into the system
  ```
-3. Can log into the portal to manage bookings
+3. **Can log into the portal to manage bookings**
  ```gherkin
  Given I am a Patient
  And I am not logged into the Patient portal
  When I log into the portal using my email and password
  Then my login attempt should be successful
  ```
-4. Can log out of the portal
+4. **Can log out of the portal**
 ```gherkin
  Given I am a Patient
  And I am successfully logged in the Patient portal
  When I log out of the Patient portal
  Then my log out attempt should be successful
  ```
-5. Can view upcoming appointments
+5. **Can view upcoming appointments**
 ```gherkin
  Given I am a Patient
  And I am successfully logged in the Patient portal
