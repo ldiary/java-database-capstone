@@ -42,12 +42,12 @@ _As an Admin, I want a secure Admin portal, so that I can manage the platform se
  Then I can retrieve the number of appointments per month
  ```
 
-**Priority:** High
+**Priority:** _High_
 
-**Story Points:** 8 points
+**Story Points:** _8 points_
 
 **Notes:**
-- Triggering of MySQL CLI procedure should be available in the Admin portal
+- _Triggering of MySQL CLI procedure should be available in the Admin portal_
 
 ## Patient User Stories
 **Title:**
@@ -91,9 +91,9 @@ _As a Patient, I want a Patient portal, so that I can find doctors and securely 
  Then I should see the list of my upcoming appointments
  ```
 
-**Priority:** High
+**Priority:** _High_
 
-**Story Points:** 8 points
+**Story Points:** _8 points_
 
 **Notes:**
-- Make sure to test the view of appointments when there are 1) zero appointment and 2) one or more appointments
+- _Make sure to test the view of appointments when there are 1) zero appointment and 2) one or more appointments_
