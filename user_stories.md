@@ -3,43 +3,43 @@
 ## Admin User Stories
 
 **Title:**
-_As an Admin, I want a secure Admin portal, so that I can manage the platform securely._
+_As an Admin, I want a secure Admin Portal, so that I can manage the platform securely._
 
 **Acceptance Criteria:**
 1. **Can log into the portal with username and password**
  ```gherkin
  Given I am an Admin
- When I log into the Admin portal using my username and password
+ When I log into the Admin Portal using my username and password
  Then my login attempt should be successful
  ```
 2. **Can log out of the portal**
 ```gherkin
  Given I am an Admin
- And I am successfully logged in the Admin portal
- When I log out of the Admin portal
+ And I am successfully logged in the Admin Portal
+ When I log out of the Admin Portal
  Then my log out attempt should be successful
  ```
 3. **Can add doctors to the portal**
 ```gherkin
  Given I am an Admin
- And I am successfully logged in the Admin portal
+ And I am successfully logged in the Admin Portal
  When I add a doctor into the system
  Then the doctor's profile should be added successfully
- And the doctor can successfully log into Doctor portal
+ And the doctor can successfully log into Doctor Portal
  ```
 4. **Can delete doctor**
 ```gherkin
  Given I am an Admin
- And I am successfully logged in the Admin portal
+ And I am successfully logged in the Admin Portal
  And a doctor is present in the system
  When I delete the doctor's profile
  Then the doctor is deleted from the system
- And the doctor can no longer log into the Doctor portal
+ And the doctor can no longer log into the Doctor Portal
  ```
 5. **Can get number of appointments per month**
 ```gherkin
  Given I am an Admin
- And I am successfully logged in the Admin portal
+ And I am successfully logged in the Admin Portal
  When I run MySQL CLI procedure for retrieving appointments per month
  Then I can retrieve the number of appointments per month
  ```
@@ -49,7 +49,8 @@ _As an Admin, I want a secure Admin portal, so that I can manage the platform se
 **Story Points:** _8 points_
 
 **Notes:**
-- _Triggering of MySQL CLI procedure should be available in the Admin portal_
+- _Criteria 3 and 4 will need Doctor's profile to verify changes are reflected in Doctor Portal._
+- _Triggering of MySQL CLI procedure should be available in the Admin Portal_
 
 ## Patient User Stories
 **Title:**
@@ -59,14 +60,14 @@ _As a Patient, I want a Patient portal, so that I can find doctors and securely 
 1. **Can view list of doctors without logging in**
  ```gherkin
  Given I am a Patient
- And I am not logged into the Patient portal
+ And I am not logged into the Patient Portal
  When I select a doctors' list
  Then I should be able to see a list of doctors
  ```
 2. **Can sign up using email and password**
  ```gherkin
  Given I am a Patient
- And I am not logged into the Patient portal
+ And I am not logged into the Patient Portal
  When I select sign up
  And I enter my email and password
  Then I should be successfully registered into the system
@@ -74,21 +75,21 @@ _As a Patient, I want a Patient portal, so that I can find doctors and securely 
 3. **Can log into the portal to manage bookings**
  ```gherkin
  Given I am a Patient
- And I am not logged into the Patient portal
+ And I am not logged into the Patient Portal
  When I log into the portal using my email and password
  Then my login attempt should be successful
  ```
 4. **Can log out of the portal**
 ```gherkin
  Given I am a Patient
- And I am successfully logged in the Patient portal
- When I log out of the Patient portal
+ And I am successfully logged in the Patient Portal
+ When I log out of the Patient Portal
  Then my log out attempt should be successful
  ```
 5. **Can view upcoming appointments**
 ```gherkin
  Given I am a Patient
- And I am successfully logged in the Patient portal
+ And I am successfully logged in the Patient Portal
  When I select my upcoming appointments
  Then I should see the list of my upcoming appointments
  ```
@@ -102,33 +103,33 @@ _As a Patient, I want a Patient portal, so that I can find doctors and securely 
 
 ## Doctor User Stories
 **Title:**
-_As a Doctor, I want a Doctor portal, so that I can manage my availability and appointments securely._
+_As a Doctor, I want a Doctor Portal, so that I can manage my availability and appointments securely._
 
 **Acceptance Criteria:**
 1. **Can log into the portal to manage appointments**
  ```gherkin
  Given I am a Doctor
- When I log into the Doctor portal using my email and password
+ When I log into the Doctor Portal using my email and password
  Then my login attempt should be successful
  ```
 2. **Can log out of the portal to protect data**
 ```gherkin
  Given I am a Doctor
- And I am successfully logged in the Doctor portal
- When I log out of the Doctor portal
+ And I am successfully logged in the Doctor Portal
+ When I log out of the Doctor Portal
  Then my log out attempt should be successful
  ```
 3. **Can view appointment calendar to stay organized**
 ```gherkin
  Given I am a Doctor
- And I am successfully logged in the Doctor portal
+ And I am successfully logged in the Doctor Portal
  When I select the calendar
  Then I should see my appointment calendar
  ```
 4. **Can mark unavailability to inform patients only the available slots**
 ```gherkin
  Given I am a Doctor
- And I am successfully logged in the Doctor portal
+ And I am successfully logged in the Doctor Portal
  And I am in the appointment calendar
  When I mark my unavailability in the calendar
  Then the appointment calendar should show I am not available
@@ -138,7 +139,7 @@ _As a Doctor, I want a Doctor portal, so that I can manage my availability and a
 5. **Can view patient details for upcoming appointment preparations**
 ```gherkin
  Given I am a Doctor
- And I am successfully logged in the Doctor portal
+ And I am successfully logged in the Doctor Portal
  And I have an appointment coming
  When I select the appointment
  Then then I should see the patient details for that appointment
@@ -148,4 +149,4 @@ _As a Doctor, I want a Doctor portal, so that I can manage my availability and a
 **Story Points:** _8 points_
 
 **Notes:**
-- _Criteria 5 will need a Doctor login profile to mark unavailability in the calendar and a Patient profile to confirm the change in Patient portal._
+- _Criteria 5 will need a Doctor login profile to mark unavailability in the calendar and a Patient profile to confirm the change in Patient Portal._
