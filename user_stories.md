@@ -14,14 +14,14 @@ _As an Admin, I want a secure Admin portal, so that I can manage the platform se
 ```gherkin
  Given I am an Admin
  And I am successfully logged in the Admin portal
- When I log out ot the Admin portal
+ When I log out of the Admin portal
  Then my log out attempt should be successful
  ```
 3. **Can add doctors to the portal**
 ```gherkin
  Given I am an Admin
  And I am successfully logged in the Admin portal
- When I add a doctor in the portal
+ When I add a doctor into the system
  Then the doctor's profile should be added successfully
  ```
 4. **Can delete doctor**
@@ -36,7 +36,7 @@ _As an Admin, I want a secure Admin portal, so that I can manage the platform se
 ```gherkin
  Given I am an Admin
  And I am successfully logged in the Admin portal
- When run MySQL CLI procedure for retrieving appointments per month
+ When I run MySQL CLI procedure for retrieving appointments per month
  Then I can retrieve the number of appointments per month
  ```
 
