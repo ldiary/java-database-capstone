@@ -134,7 +134,7 @@ _As a Doctor, I want a Doctor Portal, so that I can manage my availability and a
  When I mark my unavailability in the calendar
  Then the appointment calendar should show I am not available
  And patient should see I am not available in the Doctor's list
- And patient should not be able to book me when I am unavailable
+ And patient should not be able to book an appointment with me when I am not available
  ```
 5. **Can view patient details for upcoming appointment preparations**
 ```gherkin
