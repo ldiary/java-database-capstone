@@ -38,15 +38,15 @@
 
 ```json
 {
-  "_id": "ObjectId('64abc123456')",
-  "patientName": "John Smith",
-  "appointmentId": 51,
-  "medication": "Paracetamol",
-  "dosage": "500mg",
-  "doctorNotes": "Take 1 tablet every 6 hours.",
-  "refillCount": 2,
+  "_id": "ObjectId('1234567')",
+  "patientName": "Elmer Roberts",
+  "appointmentId": 21,
+  "medication": "Amlodhipine",
+  "dosage": "30mg",
+  "doctorNotes": "Take 1 30mg table once a day",
+  "repeatMedication": "no"
   "pharmacy": {
-    "name": "Walgreens SF",
-    "location": "Market Street"
+    "name": "Boots Pharmacy",
+    "location": "East Market, London"
   }
 }
