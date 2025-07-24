@@ -14,7 +14,7 @@ public class Admin {
 //    - Marks the class as a JPA entity, which means it represents a table in the database.
 //    - It is required for persistence frameworks like Hibernate to map the class to a database table.
 
-    // 1. 'id' field:
+// 1. 'id' field:
 //    - Type: private Long
 //    - Description: 
 //      - Represents the unique identifier for the Admin entity.
@@ -39,15 +39,15 @@ public class Admin {
 //      - Represents the password of the admin for authentication.
 //      - The field is marked with @JsonProperty(access = JsonProperty.Access.WRITE_ONLY) to prevent the password from being exposed in JSON responses.
 //      - @NotNull validation ensures the password cannot be null when creating or updating an Admin.
-
     @NotNull
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String password;
+
 // 4. Constructor(s):
 //    - A no-argument constructor is implicitly provided, required by JPA for entity creation.
 //    - A parameterized constructor can be added as needed.
 
-    // 5. Getters and Setters:
+// 5. Getters and Setters:
 //    - Standard getter and setter methods are provided for accessing and modifying the fields.
     public String getUsername() {
         return username;
