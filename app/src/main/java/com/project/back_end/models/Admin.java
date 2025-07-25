@@ -6,6 +6,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 
 @Entity
 public class Admin {
@@ -30,16 +31,17 @@ public class Admin {
 //      - Represents the username of the admin.
 //      - Used to log into the system.
 //      - @NotNull validation ensures that this field cannot be null when creating or updating an Admin.
-
     @NotNull(message = "Username cannot be null")
     private String username;
+
 // 3. 'password' field:
 //    - Type: private String
 //    - Description: 
 //      - Represents the password of the admin for authentication.
 //      - The field is marked with @JsonProperty(access = JsonProperty.Access.WRITE_ONLY) to prevent the password from being exposed in JSON responses.
 //      - @NotNull validation ensures the password cannot be null when creating or updating an Admin.
-    @NotNull
+    @NotNull(message = "Password cannot be null")
+    @Size(min = 6)
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String password;
 
