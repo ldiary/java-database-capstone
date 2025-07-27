@@ -54,7 +54,6 @@ public class Doctor {
 //      - The @NotNull annotation ensures that an email address is required.
 //      - The @Email annotation validates that the email address follows a valid email format (e.g., doctor@example.com).
     @NotNull(message = "Doctor's email cannot be null")
-    @Size(min = 3, max = 100)
     @Email
     private String email;
 
